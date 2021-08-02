@@ -1,0 +1,10 @@
+::ng-deep .alerts-container {
+  display: flex;
+  box-sizing: border-box;
+
+  .alert {
+    margin: 1rem;
+    font-weight: 700;
+    border: 1px solid blue;
+  }
+}
