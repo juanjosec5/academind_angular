@@ -1,10 +1,17 @@
 <app-server></app-server>
 
 <label for="server-name">Server Name:</label>
-<input
+<!-- <input
   type="text"
   name="server-name"
-  (input)="onUpdateServerName($event)">
+  (input)="onUpdateServerName($event)"> -->
+
+  <input 
+    type="text"
+    name=""
+    id=""
+    [(ngModel)]="serverName">
+    <!-- <p>{{ serverName }}</p> -->
 
 <button
   class="btn btn-primary"
