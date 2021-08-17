@@ -1,5 +1,3 @@
-<app-server></app-server>
-
 <label for="server-name">Server Name:</label>
 <!-- <input
   type="text"
@@ -18,4 +16,10 @@
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add Server
 </button>
-<p>{{ serverCreationStatus }}</p>
+<p *ngIf="serverCreated; else noServer">Server: {{ serverName }} created</p>
+<ng-template #noServer>
+  <p>{{ serverCreationStatus }}</p>
+</ng-template>
+
+<hr>
+<app-server *ngFor="let server of serversArray"></app-server>
